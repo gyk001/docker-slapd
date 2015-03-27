@@ -1,5 +1,5 @@
 FROM phusion/baseimage:0.9.8
-MAINTAINER Nick Stenning <nick@whiteink.com>
+MAINTAINER MAINTAINER Guo Yukun, gyk001@gmail.com
 
 ENV HOME /root
 
@@ -17,9 +17,10 @@ RUN apt-get -y update
 RUN LC_ALL=C DEBIAN_FRONTEND=noninteractive apt-get install -y slapd
 
 # Default configuration: can be overridden at the docker command line
-ENV LDAP_ROOTPASS toor
-ENV LDAP_ORGANISATION Acme Widgets Inc.
-ENV LDAP_DOMAIN example.com
+
+ENV LDAP_ORGANISATION Sinosoft Co.,Ltd.
+ENV LDAP_DOMAIN sinosoft.com.cn
+ENV LDAP_ROOTPASS admin
 
 EXPOSE 389
 
